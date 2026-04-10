@@ -3,7 +3,12 @@
     "module": "es2015",
     "moduleResolution": "Node",
     "target": "es2018",
-    "allowImportingTsExtensions": true
+    "allowImportingTsExtensions": true,
+    "baseUrl": ".",
+    "paths": {
+      "{root}/*": ["*"],
+      "{src}/*": ["src/*"]
+    }
 },
   "include": ["src/**/*.ts"]
 }

@@ -1,5 +1,7 @@
 # tsc-starter
 
+![babel](https://static.platzi.com/blog/uploads/2017/01/babel-3.jpg)
+
 Proyecto preconfigurado para usar typescript.
 
 No usa `tsc` por eso, usa `rollup` + `babel`.
@@ -33,9 +35,26 @@ npm run dev   # inicia el loop
 
 ## Plugins incorporados
 
+### @rollup/plugin-alias
+
+- Permite tener shortcuts en los imports.
+- Ahora mismo soporta:
+   - `{src}/*`: empieza en `src`
+   - `{root}/*`: empieza en `src/..`
+- Para ampliarlos tienes que cambiar 2 ficheros:
+   - `tsconfig.json`: en `compilerOptions.paths` (para vscode)
+   - `commands/build.js`: en `bundle » plugins » alias » entries` (para rollup)
+
+### @rollup/plugin-node-resolve
+
+- Permite resolver módulos al estilo de node.js
+   - Acceder a `node_modules`
+- Configurado para buscar las versiones `.js` y `.ts` de la ruta si no se encuentra directamente
+   - Igual está de más esta configuración.
+
 ### sourceToString.js
 
-Permite inyectar ficheros en formato String con solo:
+- Permite inyectar ficheros en formato String con solo:
 
 ```js
 console.log(source`ruta/a/fichero.txt`);
