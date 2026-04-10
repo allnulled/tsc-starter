@@ -2,6 +2,11 @@ import hello from "./methods/hello.ts";
 import goodbye from "{src}/lib/methods/goodbye.ts";
 import clap from "{root}/src/lib/methods/clap.ts";
 
+const decorator1 = function(...args):any {
+    console.log(args);
+}
+
+@decorator1
 class Class1 {
     static hello = hello;
     static goodbye = goodbye;

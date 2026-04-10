@@ -4,7 +4,11 @@ var goodbye = () => console.log("Goodbye");
 
 var clap = () => console.log("Clap clap!");
 
-class Class1 {
+var _class;
+const decorator1 = function (...args) {
+  console.log(args);
+};
+let Class1 = decorator1(_class = class Class1 {
   static hello = hello;
   static goodbye = goodbye;
   static clap = clap;
@@ -14,7 +18,7 @@ class Class1 {
   static markup() {
     return "Esto es un string cogido de un fichero.";
   }
-}
+}) || _class;
 
 var info = {
   version: "whatever"

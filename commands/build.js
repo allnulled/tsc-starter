@@ -40,6 +40,9 @@ const bundle = await rollup({
           }
         ],
         "@babel/preset-typescript"
+      ],
+      plugins: [
+        ["@babel/plugin-proposal-decorators", { legacy: true }]
       ]
     }),
   ],

@@ -15,7 +15,10 @@ export default function sourceToString() {
       if (!code.includes("source`")) return null;
       const ast = parse(code, {
         sourceType: "module",
-        plugins: ["typescript", "jsx"],
+        plugins: [
+          "typescript",
+          ["decorators", { legacy: true }]
+        ]
       });
       let changed = false;
       traverse(ast, {

@@ -60,3 +60,10 @@ npm run dev   # inicia el loop
 console.log(source`ruta/a/fichero.txt`);
 ```
 
+### @babel/plugin-proposal-decorators
+
+- Esto actúa desde el babel de dentro del rollup
+- Permite decorators de TypeScript
+- Va con estos parámetros del `tsconfig.json`:
+   - `experimentalDecorators:true`
+   - `emitDecoratorMetadata:true`
