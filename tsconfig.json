@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "moduleResolution": "Node",
+    "target": "es2018",
+    "allowImportingTsExtensions": true
+},
+  "include": ["src/**/*.ts"]
+}
