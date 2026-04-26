@@ -1,5 +1,5 @@
 {
-  "name": "libs-compiler",
+  "name": "tsc-starter",
   "version": "1.0.0",
   "main": "dist/main.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "start": "node dist/main.js",
     "test": "bash commands/test.sh"
   },
+  "type": "module",
   "keywords": [],
   "author": "allnulled",
   "license": "WTFPL",

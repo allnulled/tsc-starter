@@ -6,10 +6,9 @@ cd "$DIR"
 
 refrescador \
   -w "$(pwd)/.." \
-  -i "**/dist/main.js" \
+  -i "**/dist/**" \
   -i "**.dist.*" \
   -i "**/dist.*" \
-  -i "**/*.dist.*" \
   -e "sh" \
   -e "ts" \
   -e "tsx" \
