@@ -1,0 +1,1 @@
+Libs.require("test/lib/database.js");

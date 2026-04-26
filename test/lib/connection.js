@@ -1,0 +1,1 @@
+console.log("This can be sync");

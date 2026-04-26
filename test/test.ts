@@ -1,1 +1,3 @@
-console.log("Start your test here");
+import fs from "fs";
+
+console.log(fs.readdirSync(import.meta.url));
